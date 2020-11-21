@@ -2,8 +2,7 @@ const nums = document.querySelectorAll('.num')
 const display = document.querySelector('.display')
 const displayAll = document.querySelector('.display-all')
 
-let formula = ''
-
+let formula = '' // 使用者的 input
 let numsArr = []
 let symbolArr = []
 
@@ -19,7 +18,7 @@ nums.forEach(num => {
             
             let action = e.target.dataset.action
 
-            // 大於 0 才推進去數字裡
+            // 大於 0 才推進去 numsArr 裡面
             if (parseFloat(formula) > 0) {
                 numsArr.push(parseFloat(formula))
                 formula = ''
@@ -42,7 +41,6 @@ nums.forEach(num => {
                 numsArr.push(parseInt(formula))
                 formula = ''
             }
-            
         }
 
         if (e.target.dataset.type === 'clear') {
