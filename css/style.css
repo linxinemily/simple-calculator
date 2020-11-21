@@ -1,0 +1,102 @@
+html,body{
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+  }
+  .wrap{
+    height: 100%;
+    width: 100%;
+    min-width: 350px;
+    min-height: 525px;
+    background: #000000;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+  .calculator{
+    width: 320px;
+    height: 525px;
+    color: #e3e3e3;
+    background-color: #000000;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .show-num{
+    width: 100%;
+    height: 109px;
+    padding-top: 16px;
+    box-sizing: border-box;
+  }
+  .display-all{
+    width: 100%;
+    height: 16px;
+    padding:0px 20px;
+    text-align: right;
+    color: #00C4FF;
+    font-size: 16px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    box-sizing: border-box;
+  }
+  .display{
+    width: 100%;
+    padding:0px 16px;
+    text-align: right;
+    font-size: 56px;
+    line-height: 66px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    box-sizing: border-box;
+  }
+  
+  .num-pad{
+    width: 100%;
+    height: 416px;
+    padding: 8px 0px;
+    display: flex;
+    justify-content: left;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .num{
+    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+    margin: 8px 7.7px;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #323232;
+  }
+  .num:hover{
+    background: #6a6a6a;
+  }
+  .symbol{
+    box-sizing: border-box;
+    background-color: #ce7836;
+    border-radius: 100%;
+  }
+  .symbol:hover{
+    background-color: #e6873e;
+  }
+  .ac{
+    background-color: #676767;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  }
+  .ac:hover {
+    background-color: #e6873e;
+    color: #ffffff;
+  }
+  .row {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
