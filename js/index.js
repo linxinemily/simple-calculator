@@ -9,7 +9,7 @@ let symbolArr = []
 
 nums.forEach(num => {
     num.addEventListener('click', (e) => {
-        if (e.target.dataset.type === 'num') {
+        if (e.target.dataset.type === 'num' || e.target.dataset.type === 'decimal') {
             formula = formula + e.target.innerHTML
 
         }
@@ -31,14 +31,9 @@ nums.forEach(num => {
             symbolArr.push(action)
         }
 
-        if (e.target.dataset.type === 'decimal') {
-            console.log(e.target.innerHTML)
-            formula = formula + e.target.innerHTML
-        }
-
         if (e.target.dataset.type === 'calculate') {
             if (formula) {
-                numsArr.push(parseInt(formula))
+                numsArr.push(parseFloat(formula))
                 formula = ''
             }
         }
@@ -86,7 +81,7 @@ function sum(numsArr, symbolArr) {
 }
 
 function render() {
-    if (!formula.indexOf('.')) {
+    if (formula.indexOf('.') == -1) {
         // 避免顯示 0 、 00
         formula = +formula
     }
